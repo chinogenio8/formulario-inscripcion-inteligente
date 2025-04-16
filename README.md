@@ -1,5 +1,6 @@
 # Formulario de Inscripción Inteligente - Torneo Splinter Gaming 2025
 
+![imagen](https://github.com/user-attachments/assets/98ba6f69-a7ed-44fc-bc90-4688fe99f021)
 
 
 ## 📝 Descripción
@@ -20,7 +21,7 @@ Formulario interactivo para inscripciones al torneo de videojuegos Splinter Gami
   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
 - **Herramientas**:
-  ![Formspree](https://img.shields.io/badge/Formspree-Form_Handler-blue)
+  ![Formspree](https://img.shields.io/badge/Formspree-Form)
   ![FontAwesome](https://img.shields.io/badge/Font_Awesome-Icons-528DD7?logo=font-awesome)
 
 ## ✨ Características Principales
