@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splinter Gaming 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/10854/10854859.png" type="image/x-icon">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenedor-formulario">
+            <div class="encabezado">
+                <h1><i class="fas fa-gamepad"></i> Splinter Gaming 2025</h1>
+                <p>Regístrate para participar en el mayor torneo del año</p>
+            </div>
+
+            <!-- Formulario con Formspree -->
+            <form id="formularioRegistro" action="https://formspree.io/f/xrbpvlkv" method="POST" class="formspree-form">
+                <input type="hidden" name="_subject" value="Nueva inscripción - Splinter Gaming 2025">
+                <input type="hidden" name="_next" value="/gracias.html">
+                
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required>
+                    <div class="mensaje-error" id="errorNombre"></div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required>
+                    <div class="mensaje-error" id="errorApellido"></div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="correo">Email </label>
+                    <input type="email" id="correo" name="correo" placeholder="Ej: juan@ejemplo.com" required>
+                    <div class="mensaje-error" id="errorCorreo"></div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="apodo">Nickname </label>
+                    <input type="text" id="apodo" name="apodo" placeholder="Tu nombre en el juego" required>
+                    <div class="mensaje-error" id="errorApodo"></div>
+                    <span class="informacion"><i class="fas fa-info-circle"></i> Máx. 15 caracteres, sin espacios</span>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="juego">Juego </label>
+                    <select id="juego" name="juego" required>
+                        <option value="" disabled selected>Selecciona un juego</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="lol">League of Legends</option>
+                        <option value="fortnite">Fortnite</option>
+                        <option value="csgo">CS:GO 2</option>
+                        <option value="fc25">FC 25</option>
+                    </select>
+                </div>
+
+                <div class="grupo-formulario" id="campoEquipo" style="display: none;">
+                    <label for="nombreEquipo">Nombre del Equipo</label>
+                    <input type="text" id="nombreEquipo" name="nombreEquipo" placeholder="Solo para juegos por equipos">
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="nivel">Nivel </label>
+                    <div class="grupo-radio">
+                        <label><input type="radio" name="nivel" value="principiante" required> Principiante</label>
+                        <label><input type="radio" name="nivel" value="intermedio"> Intermedio</label>
+                        <label><input type="radio" name="nivel" value="avanzado"> Avanzado</label>
+                    </div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="avatar">Avatar (opcional)</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                    <div class="vista-previa" id="vistaPreviaAvatar">
+                        <img id="imagenPrevia" style="display: none;">
+                        <span id="textoSinImagen">No hay imagen seleccionada</span>
+                    </div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="fechaNacimiento">Fecha de Nacimiento </label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                    <div class="mensaje-error" id="errorFechaNacimiento"></div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="comentarios">Comentarios adicionales</label>
+                    <textarea id="comentarios" name="comentarios" placeholder="Algo que debamos saber..."></textarea>
+                    <div class="contador-caracteres"><span id="contadorCaracteres">0</span>/200 caracteres</div>
+                </div>
+
+                <div class="grupo-formulario grupo-casilla">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label class="acepto" for="terminos">Acepto los <a href="#" class="enlace-terminos">términos y condiciones</a> </label>
+                </div>
+
+                <button type="submit" id="botonEnviar" class="boton-resaltado">
+                    <span id="textoBoton">Enviar Inscripción</span>
+                    <div class="cargador" id="cargador" style="display: none;"></div>
+                </button>
+            </form>
+            <div id="mensajeFormulario" style="display: none;">
+                <div class="mensaje-exito">
+                    <i class="fas fa-check-circle"></i> ¡Inscripción exitosa! Te hemos enviado un correo de confirmación.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cambiar-tema">
+        <button id="botonTema"><i class="fas fa-moon"></i></button>
+    </div>
+
+    <audio id="sonidoExito" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
